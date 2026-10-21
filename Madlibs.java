@@ -14,4 +14,16 @@ public class Madlibs {
     System.out.print("Enter a noun: ");
     String noun = scanner.nextLine();
     story = part1 + noun + part2;
+
+    //split story for adjective
+    int startAdjective1 = story.indexof("<");
+    int endAdjective1 = story.indexOf(">");
+    String part1 = story.substring(0, startAdjective1);
+    String part2 = story.substring(endAdjective1 + 1);
+    // user input adjective1
+    System.out.print("Enter an adjective: ");
+    String adjective1 = scanner.nextLine();
+    story = part1 + adjective1 + part2;
+
+    
 }
